@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <link rel="stylesheet" href="w3.css" />
-  <title>Station Météo ESP32</title>
+  <title>OptoSigma Stepper Driver</title>
 </head>
 
 
@@ -32,8 +32,8 @@
             </div>
 
             <div class="w3-half" style="display: flex; justify-content: space-between; align-items: center; height: 100px;">
-              <button id="speedminus" class="w3-button w3-red w3-half w3-margin w3-padding-16"><h1>-</h1></button>
-              <button id="speedplus" class="w3-button w3-red w3-half w3-padding-16 w3-margin-right"><h1>+</h1></button>
+              <button id="speedminus" class="disable-dbl-tap-zoom w3-button w3-red w3-half w3-margin w3-padding-16"><h1>-</h1></button>
+              <button id="speedplus" class="disable-dbl-tap-zoom w3-button w3-red w3-half w3-padding-16 w3-margin-right"><h1>+</h1></button>
             </div>
           </div>
 
@@ -57,10 +57,10 @@
             </div>
 
             <div class="w3-twothird" style="display: flex; justify-content: space-between; align-items: center; height: 100px;">
-              <button id="moveminus" class="w3-button w3-red w3-half w3-margin w3-padding-16"><h1>-</h1></button>
-              <button id="moveplus" class="w3-button w3-red w3-half  w3-padding-16"><h1>+</h1></button>
+              <button id="moveminus" class="disable-dbl-tap-zoom w3-button w3-red w3-half w3-margin w3-padding-16"><h1>-</h1></button>
+              <button id="moveplus" class="disable-dbl-tap-zoom w3-button w3-red w3-half  w3-padding-16"><h1>+</h1></button>
               
-              <button id="movesend" class="w3-button w3-green w3-half w3-margin w3-padding-16"><h1>Send</h1></button>
+              <button id="movesend" class="disable-dbl-tap-zoom w3-button w3-green w3-half w3-margin w3-padding-16"><h1>Send</h1></button>
             </div>
           </div>
 
@@ -90,6 +90,12 @@
 
 
 <style>
+
+.disable-dbl-tap-zoom {
+  touch-action: manipulation;
+}
+
+
   input[type="range"] {
   width: 300px;
   background: transparent;
