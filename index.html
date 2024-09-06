@@ -15,7 +15,7 @@
 
 <body class="w3-light-grey">
   <!-- titre -->
-  <div class="w3-container w3-deep-orange w3-center w3-margin-bottom">
+  <div class="w3-container optosigma-color w3-center w3-margin-bottom">
     <h1><b>OptoSigma Driver</b></h1>
     <h4>Wireless Control</h4>
   </div>
@@ -32,15 +32,15 @@
             </div>
 
             <div class="w3-half" style="display: flex; justify-content: space-between; align-items: center; height: 100px;">
-              <button id="speedminus" class="disable-dbl-tap-zoom w3-button w3-red w3-half w3-margin w3-padding-16"><h1>-</h1></button>
-              <button id="speedplus" class="disable-dbl-tap-zoom w3-button w3-red w3-half w3-padding-16 w3-margin-right"><h1>+</h1></button>
+              <button id="speedminus" class="disable-dbl-tap-zoom w3-button optosigma-color w3-half w3-margin w3-padding-16"><h1>-</h1></button>
+              <button id="speedplus" class="disable-dbl-tap-zoom w3-button optosigma-color w3-half w3-padding-16 w3-margin-right"><h1>+</h1></button>
             </div>
           </div>
 
           <div id="slider" class="200x120px w3-padding-32 w3-margin">
             <input type="range" min="100" max="2000" value="1000" class="slider" id="speedSetting">
           </div>
-          <footer class="w3-container w3-deep-orange">
+          <footer class="w3-container optosigma-color">
             <h3><b>Speed Setting</b></h3>
           </footer>
         </div>
@@ -57,17 +57,17 @@
             </div>
 
             <div class="w3-twothird" style="display: flex; justify-content: space-between; align-items: center; height: 100px;">
-              <button id="moveminus" class="disable-dbl-tap-zoom w3-button w3-red w3-half w3-margin w3-padding-16"><h1>-</h1></button>
-              <button id="moveplus" class="disable-dbl-tap-zoom w3-button w3-red w3-half  w3-padding-16"><h1>+</h1></button>
+              <button id="moveminus" class="disable-dbl-tap-zoom w3-button optosigma-color w3-half w3-margin w3-padding-16"><h1>-</h1></button>
+              <button id="moveplus" class="disable-dbl-tap-zoom w3-button optosigma-color w3-half  w3-padding-16"><h1>+</h1></button>
               
-              <button id="movesend" class="disable-dbl-tap-zoom w3-button w3-green w3-half w3-margin w3-padding-16"><h1>Send</h1></button>
+              <button id="movesend" class="disable-dbl-tap-zoom w3-button w3-green w3-half w3-margin w3-padding-16"><h1>⇪</h1></button>
             </div>
           </div>
 
           <div id="slider" class="200x120px w3-padding-32 w3-margin">
             <input type="range" min="-3000" max="3000" value="0" class="slider" id="DistanceSetting">
           </div>
-          <footer class="w3-container w3-deep-orange">
+          <footer class="w3-container optosigma-color">
             <h3><b>Movement</b></h3>
           </footer>
         </div>
@@ -77,7 +77,7 @@
     </div>
     
     
-    <footer class="w3-container w3-deep-orange w3-center w3-margin-bottom">
+    <footer class="w3-container optosigma-color w3-center w3-margin-bottom">
       <h6>Merlet Bastien, OptoSigma <b>2024</b></h6>
   
     </footer>
@@ -93,6 +93,11 @@
 
 .disable-dbl-tap-zoom {
   touch-action: manipulation;
+}
+
+.optosigma-color {
+  background-color: #FF333F;
+  color: white;
 }
 
 
