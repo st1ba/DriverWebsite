@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="w3.css" />
+  <title>Station Météo ESP32</title>
+</head>
+
+
+
+
+
+<body class="w3-light-grey">
+  <!-- titre -->
+  <div class="w3-container w3-deep-orange w3-center w3-margin-bottom">
+    <h1><b>OptoSigma Driver</b></h1>
+    <h4>Wireless Control</h4>
+  </div>
+
+    <div style="margin: 10px;" class="w3-padding-16 w3-container w3-light-grey w3-center w3-margin-bottom">
+
+    <div class="w3-half w3-container">
+        <div class="w3-card w3-white">
+
+          <div class="w3-container w3-padding-16" style="display: flex; align-items: center;">
+            <div class="w3-card w3-pale-red w3-half  w3-padding-16">
+              <h3><b>Speed</b> (PPS)</h3>
+              <input type="text" id="speed" name="speedTextInput" required minlength="4" maxlength="8" size="10" />
+            </div>
+
+            <div class="w3-half" style="display: flex; justify-content: space-between; align-items: center; height: 100px;">
+              <button id="speedminus" class="w3-button w3-red w3-half w3-margin w3-padding-16"><h1>-</h1></button>
+              <button id="speedplus" class="w3-button w3-red w3-half w3-padding-16"><h1>+</h1></button>
+            </div>
+          </div>
+
+          <div id="slider" class="200x120px w3-padding-32 w3-margin">
+            <input type="range" min="100" max="2000" value="1000" class="slider" id="speedSetting">
+          </div>
+          <footer class="w3-container w3-deep-orange">
+            <h3><b>Speed Setting</b></h3>
+          </footer>
+        </div>
+      </div>
+
+
+      <div class="w3-half w3-container">
+        <div class="w3-card w3-white">
+
+          <div class="w3-container w3-padding-16" style="display: flex; align-items: center;">
+            <div class="w3-third w3-card w3-pale-red w3-quarter  w3-padding-16">
+              <h3><b>Distance</b> (Pulse)</h3>
+              <input type="text" id="DistanceInput" name="speedTextInput" required minlength="4" maxlength="8" size="10" />
+            </div>
+
+            <div class="w3-twothird" style="display: flex; justify-content: space-between; align-items: center; height: 100px;">
+              <button id="moveminus" class="w3-button w3-red w3-half w3-margin w3-padding-16"><h1>-</h1></button>
+              <button id="moveplus" class="w3-button w3-red w3-half  w3-padding-16"><h1>+</h1></button>
+              
+              <button id="movesend" class="w3-button w3-green w3-half w3-margin w3-padding-16"><h1>Send</h1></button>
+            </div>
+          </div>
+
+          <div id="slider" class="200x120px w3-padding-32 w3-margin">
+            <input type="range" min="-3000" max="3000" value="0" class="slider" id="DistanceSetting">
+          </div>
+          <footer class="w3-container w3-deep-orange">
+            <h3><b>Movement</b></h3>
+          </footer>
+        </div>
+      </div>
+
+
+    </div>
+    
+    
+    <footer class="w3-container w3-deep-orange w3-center w3-margin-bottom">
+      <h6>Merlet Bastien, OptoSigma <b>2024</b></h6>
+  
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+<style>
+  input[type="range"] {
+  width: 300px;
+  background: transparent;
+}
+/*###################################*/
+/*###########Responsive Range########*/
+/*###################################*/
+/*##############Core Style###########*/
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+/*#############Thumb##############*/
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 36px;
+  width: 36px;
+  background: #555;
+  cursor: pointer;
+  margin-top: -12px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 36px;
+  width: 36px;
+  background: #555;
+  cursor: pointer;
+}
+
+input[type="range"]::-ms-thumb {
+  height: 36px;
+  width: 36px;
+  background: #555;
+  cursor: pointer;
+}
+/*#############Track##############*/
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  background: #ccc;
+  border-radius: 20%;
+}
+
+input[type="range"]:active::-webkit-slider-runnable-track {
+  background: #d6d6d6;
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  background: #ccc;
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background: #ccc;
+}
+
+input[type="range"]:focus::-ms-fill-lower {
+  background: #ddd;
+}
+
+input[type="range"]::-ms-fill-upper {
+  background: #ccc;
+}
+
+input[type="range"]:focus::-ms-fill-upper {
+  background: #ddd;
+}
+
+@media (max-width: 600px) {
+  .w3-container {
+    flex-direction: column;
+  }
+
+  #moveminus, #speedplus {
+    width: 100%;
+    margin: 0;
+  }
+
+  #movesend {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+</style>
